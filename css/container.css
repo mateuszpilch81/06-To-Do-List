@@ -12,5 +12,7 @@ html {
     max-width: 900px;
     padding: 20px;
     margin: 0 auto;
+    background: #eee;
+    font-family: 'Montserrat', sans-serif;
 
 }
