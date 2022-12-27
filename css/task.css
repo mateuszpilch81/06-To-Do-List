@@ -12,3 +12,9 @@
     padding: 10px;
     border-bottom: 1px solid #ddd;
 }
+
+.task__content {}
+
+.task__content--done {
+    text-decoration: line-through;
+}
