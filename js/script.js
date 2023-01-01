@@ -7,7 +7,7 @@
 
     const toggleTaskDone = (taskIndex) => {
         task[taskIndex].done = !task[taskIndex].done;
-        render ();
+        rednder ();
     };
 
     const addNewTask = (newTaskContent) => {
@@ -25,7 +25,7 @@
         });
     };
 
-    const bindToogleDoneEvents = () => {
+    const bindToggleDoneEvents = () => {
         const toggleDoneButtons = document.querySelectorAll (".js-toggleDone");
 
         toggleDoneButtons.forEach((toggleDoneButtons, taskIndex) => {
@@ -53,11 +53,12 @@
    </li>
        `;
         }
-        document.querySelector(".js-tasks").innerHTML = taskListHTMLContent;
+        
+        document.querySelector(".js-tasks").innerHTML = tasksListHTMLContent;
         bindRemoveEvents();
         bindToggleDoneEvents();
     };
- const onFormSubmit = (event) => 
+    const onFormSubmit = (event) => { 
  event.preventDefault ();
  
  const newTaskElement = document.querySelector (".js-newTask");
