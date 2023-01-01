@@ -7,7 +7,7 @@
 
     const toggleTaskDone = (taskIndex) => {
         task[taskIndex].done = !task[taskIndex].done;
-        rednder ();
+        render ();
     };
 
     const addNewTask = (newTaskContent) => {
@@ -36,24 +36,24 @@
     };
 
     const render = () => {
-        lettaskListHTMLContent = "";
+        let tasksListHTMLContent = "";
+  
         for (const task of tasks) {
-            taskListHTMLContent += '
-            <li class "tasks__item js-task">
-
-            <button class = "tasks__button tasks__button--toogleDone js-toggleDone">
-            ${task.done ? "✓" : ""}
-            </button>
-<span class = "tasks__content ${task.done ? " tasks__content--done" : ""} " >
- ${task.content}
-  </span>
-<button class = "tasks__button tasks__button--remove js-remove">
-🗑
-</button>
-</li>
-';
+           tasksListHTMLContent += `
+      <li
+       class="list__item js-task"
+       >
+      <button class="list__button list__button--toggleDone js-toggleDone">
+      ${task.done ? "✓" : ""}
+      </button>
+      <span class="list__item${task.done ? " list__item--done" : ""}">${task.content}</span>
+      <button class="list__button list__button--remove js-remove">
+      🗑
+      </button>
+   </li>
+       `;
         }
-        document.querySelector(".js-tasks).innerHTML = taskListHTMLContent;
+        document.querySelector(".js-tasks").innerHTML = taskListHTMLContent;
         bindRemoveEvents();
         bindToggleDoneEvents();
     };
