@@ -7,7 +7,7 @@
 
     const toggleTaskDone = (taskIndex) => {
         task[taskIndex].done = !task[taskIndex].done;
-        rednder ();
+        render ();
     };
 
     const addNewTask = (newTaskContent) => {
