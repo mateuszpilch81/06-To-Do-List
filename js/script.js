@@ -1,17 +1,17 @@
 {
-    const task = [];
+    const tasks = [];
     const removeTask = (taskIndex) => {
-        task.splice (taskIndex,1);
+        tasks.splice (taskIndex,1);
         render ();
     };
 
     const toggleTaskDone = (taskIndex) => {
-        task[taskIndex].done = !task[taskIndex].done;
+        tasks[taskIndex].done = !tasks[taskIndex].done;
         render ();
     };
 
     const addNewTask = (newTaskContent) => {
-        task.push({content: newTaskContent})
+        tasks.push({content: newTaskContent})
         render();
     };
 
@@ -21,7 +21,7 @@
         removeButtons.forEach((removeButton, taskIndex) => {
             removeButton.addEventListener ("click", () => {
                 removeTask(taskIndex);
-            });
+            }); 
         });
     };
 
